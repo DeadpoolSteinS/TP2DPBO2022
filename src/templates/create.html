@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Anggota</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            max-width: 670px;
+            margin: auto;
+            padding: 5px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border: 1px solid black;
+            background-color: rgb(235, 231, 231);
+        }
+        #logo{
+            margin: 0 24px;
+        }
+        #logo > p{
+            padding: 2px 5px;
+            color: white;
+            background-color: rgb(0, 119, 255);
+        }
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+        #menu > a{
+            padding: 2px 5px;
+        }
+        #menu > a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+        #menu > a:nth-child(2){
+            background-color: rgb(47, 255, 95);
+            border-radius: 5px;
+        }
+        form{
+            width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgb(222, 222, 222);
+        }
+        li{
+            margin: 10px 0;
+            list-style: none;
+        }
+        li > label{
+            display: inline-block;
+            width: 100px;
+        }
+        li > input, li > select{
+            width: 350px;
+            padding: 2px 5px;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+        li:nth-child(6){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #submit, #back{
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 5px;
+            padding: 2px 10px;
+            border-radius: 2px;
+            border: 1px solid black;
+        }
+        #submit{
+            background-color: rgb(73, 197, 27);
+        }
+        #submit:hover{
+            background-color: rgb(77, 214, 27);
+        }
+        #back{
+            background-color: rgb(241, 12, 12);
+        }
+        #back:hover{
+            background-color: rgb(255, 9, 9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div id="logo">
+                <p>LOGO</p>
+            </div>
+            <div id="menu">
+                <a href="index.php">Home</a>
+                <a href="create.php?ADD_ID_DIVISI">Tambah Pengurus</a>
+                <a href="divisi.php">Divisi</a>
+            </div>
+        </nav>
+        <div id="main-content">
+            <form action="" method="post" enctype="multipart/form-data">
+                <li>
+                    <label for="nim">NIM</label><span>:</span>
+                    <input type="text" name="nim" id="nim" value="DATA_NIM">
+                </li>
+                <li>
+                    <label for="nama">Nama</label><span>:</span>
+                    <input type="text" name="nama" id="nama" value="DATA_NAMA" required>
+                </li>
+                <li>
+                    <label for="semester">Semester</label><span>:</span>
+                    <input type="number" name="semester" id="semester" value="DATA_SEMESTER">
+                </li>
+                <li>
+                    <label for="bidang">Bidang</label><span>:</span>
+                    <select name="bidang" id="bidang">
+                        DATA_SELECT
+                    </select>
+                </li>
+                <li>
+                    <label for="image">Image</label><span>:</span>
+                    <input type="file" name="image" id="image">
+                </li>
+                <li>
+                    <a href="index.php?BACK" id="back">Back</a>
+                    <button type="submit" name="submit" id="submit">Submit</button>
+                </li>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
